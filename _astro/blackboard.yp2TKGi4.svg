@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 500" width="1800" height="500" fill="#000" stroke="#000" stroke-linecap="round" stroke-linejoin="round" font-family="Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, 'DejaVu Serif', serif">
+<!-- The page-top blackboard of "Lie Groups and Their Representation Theory". It is used as a CSS mask (black = ink), so its colour comes from the theme. Every formula is copied symbol for symbol from the course's canonical lecture sources. The English and Lithuanian sources have the same formula, so the board serves both languages, and it contains no words. Sub- and superscripts use dy shifts rather than baseline-shift, so they also render in Firefox. Each formula's source (EN line / LT line), checked on 2026-10-30 against lectures/lec01.tex sha256 d63f0e14…6057c6 / lie-groups-lt/lectures/lec01.tex 50bc5989…a35 and lectures/lec02.tex 074a7445…45a3 / lie-groups-lt/lectures/lec02.tex 6b5e1403…0f06 (full hashes in review/platform-port/batch14visual.md):
+  left column
+    exp X = e^X = sum_{k=0}^inf X^k/k!        lec02 Definition (Matrix exponential), EN 41 / LT 41
+    [X,Y] = XY - YX                           lec01, EN 367 / LT 392
+    Ad_g X = g X g^{-1}                       lec02 section "Conjugation and homomorphisms", EN 307 / LT 340
+    det exp X = e^{tr X}                      lec02 Proposition (Properties of the matrix exponential) (v), EN 59 / LT 59
+    g exp(X) g^{-1} = exp(g X g^{-1})         the same proposition (iv), EN 58 / LT 58
+    (dL_g)_e : T_eG -> T_gG                   lec01, EN 298 / LT 313
+  right column
+    exp(Ad_g X) = g exp(X) g^{-1}             lec02 Theorem (Differentiating homomorphisms) (ii), for g in G and X in g, EN 313 / LT 346
+    S^1 = {(x,y) in R^2 : x^2+y^2 = 1}        lec01 Example (A coordinate on the circle), EN 65 / LT 66
+  Formulas that hold only under a hypothesis the board cannot show (the transposed commutator, the second-order term, the homomorphism identity) were removed on 2026-10-30 (review/platform-port/batch16art.md).
+  The drawing in the middle redraws the TikZ figure after that example (lec01, EN 86-94 / LT 88-96) at 150 units per source unit, centred on the tile (x = 900): the unit circle, the arc from -55 to 55 degrees covered by one chart, the x and y axes, and the tangent arrow (0,a) at (1,0). As in the source, the arrow's length is schematic. Both formula columns lie within x = 300-1530, so a viewport 1280 px or wider (which shows the tile's middle) shows every formula whole. -->
+<g stroke="none">
+<!-- left column -->
+<g transform="rotate(-2 300 80)">
+<text x="464" y="80" font-size="34" font-style="italic" text-anchor="end"><tspan font-style="normal">exp</tspan> X = e<tspan dy="-13" font-size="0.65em">X</tspan><tspan dy="13" font-style="normal">&#160;=</tspan></text>
+<text x="502" y="90" font-size="50" text-anchor="middle">∑</text>
+<text x="502" y="40" font-size="18" text-anchor="middle">∞</text>
+<text x="502" y="116" font-size="18" font-style="italic" text-anchor="middle">k <tspan font-style="normal">= 0</tspan></text>
+<text x="562" y="62" font-size="28" font-style="italic" text-anchor="middle">X<tspan dy="-11" font-size="0.65em">k</tspan></text>
+<path d="M542 71 L582 71" stroke="#000" stroke-width="1.8" fill="none"/>
+<text x="562" y="99" font-size="28" font-style="italic" text-anchor="middle">k<tspan font-style="normal">!</tspan></text>
+</g>
+<text x="312" y="168" font-size="30" font-style="italic" transform="rotate(1 312 168)">[X, Y] = XY − YX</text>
+<text x="300" y="234" font-size="28" font-style="italic" transform="rotate(-1 300 234)"><tspan font-style="normal">Ad</tspan><tspan dy="6" font-size="0.7em">g</tspan><tspan dy="-6">&#160;X = gXg</tspan><tspan dy="-11" font-size="0.65em">−1</tspan></text>
+<text x="312" y="298" font-size="26" font-style="italic" transform="rotate(1 312 298)"><tspan font-style="normal">det exp</tspan> X = e<tspan dy="-10" font-size="0.65em"><tspan font-style="normal">tr</tspan> X</tspan></text>
+<text x="300" y="362" font-size="24" font-style="italic" transform="rotate(-1 300 362)">g <tspan font-style="normal">exp(</tspan>X<tspan font-style="normal">)</tspan> g<tspan dy="-9" font-size="0.65em">−1</tspan><tspan dy="9">&#160;=&#160;</tspan><tspan font-style="normal">exp(</tspan>gXg<tspan dy="-9" font-size="0.65em">−1</tspan><tspan dy="9" font-style="normal">)</tspan></text>
+<text x="312" y="426" font-size="24" font-style="italic" transform="rotate(1 312 426)">(dL<tspan dy="5" font-size="0.7em">g</tspan><tspan dy="-5">)</tspan><tspan dy="5" font-size="0.7em">e</tspan><tspan dy="-5">&#160;: T</tspan><tspan dy="5" font-size="0.7em">e</tspan><tspan dy="-5">G ⟶ T</tspan><tspan dy="5" font-size="0.7em">g</tspan><tspan dy="-5">G</tspan></text>
+<!-- right column -->
+<text x="1180" y="76" font-size="26" font-style="italic" transform="rotate(-1 1180 76)"><tspan font-style="normal">exp(Ad</tspan><tspan dy="6" font-size="0.7em">g</tspan><tspan dy="-6">X</tspan><tspan font-style="normal">)</tspan> = g <tspan font-style="normal">exp(</tspan>X<tspan font-style="normal">)</tspan> g<tspan dy="-10" font-size="0.65em">−1</tspan></text>
+<text x="1180" y="298" font-size="25" font-style="italic" transform="rotate(-1 1180 298)">S<tspan dy="-10" font-size="0.65em" font-style="normal">1</tspan><tspan dy="10">&#160;= {(x, y) ∈&#160;</tspan><tspan font-style="normal" font-family="'DejaVu Serif', serif">ℝ</tspan><tspan dy="-10" font-size="0.65em" font-style="normal">2</tspan><tspan dy="10">&#160;: x</tspan><tspan dy="-10" font-size="0.65em" font-style="normal">2</tspan><tspan dy="10">&#160;+ y</tspan><tspan dy="-10" font-size="0.65em" font-style="normal">2</tspan><tspan dy="10" font-style="normal">&#160;= 1}</tspan></text>
+<!-- labels of the circle figure -->
+<text x="1116" y="259" font-size="25" font-style="italic">x</text>
+<text x="900" y="45" font-size="25" font-style="italic" text-anchor="middle">y</text>
+<text x="1062" y="124" font-size="23" font-style="italic"><tspan font-style="normal">(0,&#160;</tspan>a<tspan font-style="normal">)</tspan></text>
+<text x="1058" y="283" font-size="23">(1, 0)</text>
+<!-- arrowheads and the base point -->
+<path d="M1110 250 L1090 241 L1095 250 L1090 259 Z"/>
+<path d="M900 55 L891 75 L900 70 L909 75 Z"/>
+<path d="M1050 115 L1041 135 L1050 130 L1059 135 Z"/>
+<circle cx="1050" cy="250" r="6"/>
+</g>
+<g fill="none">
+<!-- the unit circle, the chart's arc from -55 to 55 degrees, the axes from -1.2 to 1.4 (x) and -1.15 to 1.3 (y), and the tangent arrow from (1,0) to (1,0.9) -->
+<circle cx="900" cy="250" r="150" stroke-width="2"/>
+<path d="M986 372.9 A 150 150 0 0 0 986 127.1" stroke-width="5.5"/>
+<path d="M720 250 L1100 250" stroke-width="1.8"/>
+<path d="M900 422.5 L900 65" stroke-width="1.8"/>
+<path d="M1050 250 L1050 126" stroke-width="2.8"/>
+</g>
+</svg>

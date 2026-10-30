@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Lie Groups / Lie grupės">
+  <rect width="32" height="32" rx="7" fill="#28536b"/>
+  <!-- The circle with a tangent arrow at (1,0): the Lecture 1 picture of a
+       one-dimensional tangent space, drawn in the notes' definition fill
+       (bgdef #F1F5F8) on the course's blue-grey accent (#28536B). The arrow
+       length is schematic, as in the printed figure. -->
+  <g stroke="#f1f5f8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="13.5" cy="17" r="8.5" stroke-width="1.9"/>
+    <path d="M22 17 V6.6" stroke-width="2.3"/>
+    <path d="M19.4 9.4 L22 6.4 L24.6 9.4" stroke-width="2.3"/>
+  </g>
+  <circle cx="22" cy="17" r="2.3" fill="#f1f5f8"/>
+</svg>

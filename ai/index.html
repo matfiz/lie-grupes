@@ -1,0 +1,312 @@
+<!DOCTYPE html><html lang="lt" data-refpop="{&#34;open&#34;:&#34;Atverti konspekte →&#34;,&#34;goto&#34;:&#34;Eiti ten →&#34;,&#34;loading&#34;:&#34;Įkeliama…&#34;,&#34;failed&#34;:&#34;Šios nuorodos įkelti nepavyko.&#34;}"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mokytis su DI · Lie grupės ir jų įvaizdžių teorija</title><meta name="description" content="DI asistentas paaiškins bet ką bet kuriuo paros metu – ir lygiai taip pat noriai galvos už jus. Būtent taip žmonės neišlaiko egzaminų. Naudokitės juo pirmuoju būdu: pasirinkite skyrelį žemiau ir gaukite užklausą, kuri priverčia jį paaiškinti ir tada grąžinti darbą jums."><link rel="icon" href="/lie-grupes/favicon.svg"><link rel="alternate" hreflang="lt" href="/lie-grupes/ai"><link rel="alternate" hreflang="en" href="/lie-grupes/en/ai"><script>
+      // Applied before first paint, so the page never flashes the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("liegroups-theme");
+          if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script><link rel="stylesheet" href="/lie-grupes/_astro/about.CcSh3vOH.css"></head> <body> <script type="module" src="/lie-grupes/_astro/UserNav.astro_astro_type_script_index_0_lang.DBZI4Erb.js"></script>  <div class="board" aria-hidden="true"><div class="board-ink"></div></div> <script>
+      // Fade the board out over the first 60% of a screen of scrolling.
+      (function () {
+        var board = document.querySelector(".board"), frame = 0;
+        if (!board) return;
+        function update() {
+          frame = 0;
+          board.style.opacity = String(Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.6)));
+        }
+        window.addEventListener("scroll", function () {
+          if (!frame) frame = requestAnimationFrame(update);
+        }, { passive: true });
+        update();
+      })();
+    </script> <a class="skip-link" href="#main">Pereiti prie turinio</a> <header class="site-header"> <div class="wrap bar">  <a class="brand" href="/lie-grupes/">Lie grupės ir jų įvaizdžių teorija</a> <nav class="site-nav">  <div class="nav-links"> <a href="/lie-grupes/"> Paskaitos </a><a href="/lie-grupes/problems"> Uždaviniai </a><a href="/lie-grupes/review"> Kartojimas </a><a href="/lie-grupes/ai" aria-current="page"> Mokytis su DI </a><a href="/lie-grupes/literature"> Literatūra </a><a href="/lie-grupes/about"> Apie kursą </a><a href="/lie-grupes/search"> Paieška </a> </div>  <a class="matfiz-user-nav" href="/lie-grupes/user" data-matfiz-nav data-label="Mano pažanga" aria-label="Mano pažanga" title="Mano pažanga" data-matfiz-course="{&#34;version&#34;:1,&#34;id&#34;:&#34;liegroups&#34;,&#34;prefix&#34;:&#34;liegroups-&#34;,&#34;titles&#34;:{&#34;lt&#34;:&#34;Lie grupės ir jų įvaizdžių teorija&#34;,&#34;en&#34;:&#34;Lie Groups and Their Representation Theory&#34;},&#34;homes&#34;:{&#34;lt&#34;:&#34;/lie-grupes/&#34;,&#34;en&#34;:&#34;/lie-grupes/en/&#34;},&#34;details&#34;:{&#34;lt&#34;:&#34;/lie-grupes/&#34;,&#34;en&#34;:&#34;/lie-grupes/en/&#34;}}" hidden data-astro-cid-udyq3rbu> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-udyq3rbu> <path d="M3 3v18h18" data-astro-cid-udyq3rbu></path><path d="m7 15 4-4 3 3 5-6" data-astro-cid-udyq3rbu></path> </svg> </a>   <div class="lang-switch" role="group" aria-label="Kalba"> <a href="/lie-grupes/ai" hreflang="lt" lang="lt" aria-label="Lietuvių" title="Lietuvių" aria-current="true"> LT </a><a href="/lie-grupes/en/ai" hreflang="en" lang="en" aria-label="English" title="English"> EN </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Perjungti šviesią ir tamsią temą"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" id="main" data-pagefind-body="true">  <header class="page-head"> <h1>Mokytis su DI, o ne iš jo</h1> <p class="lede">DI asistentas paaiškins bet ką bet kuriuo paros metu – ir lygiai taip pat noriai galvos už jus. Būtent taip žmonės neišlaiko egzaminų. Naudokitės juo pirmuoju būdu: pasirinkite skyrelį žemiau ir gaukite užklausą, kuri priverčia jį paaiškinti ir tada grąžinti darbą jums.</p> </header> <section class="ask" id="ask" aria-labelledby="ask-heading" data-ask="{&#34;lectures&#34;:[{&#34;id&#34;:1,&#34;title&#34;:&#34;Lie grupės ir jų liestinės algebros&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec1-s1&#34;,&#34;title&#34;:&#34;Glodžiosios koordinatės&#34;},{&#34;id&#34;:&#34;lec1-s2&#34;,&#34;title&#34;:&#34;Glodžiosios grupės&#34;},{&#34;id&#34;:&#34;lec1-s3&#34;,&#34;title&#34;:&#34;Liestiniai vektoriai neutraliajame elemente&#34;},{&#34;id&#34;:&#34;lec1-s4&#34;,&#34;title&#34;:&#34;Postūmiai ir skliaustai&#34;},{&#34;id&#34;:&#34;lec1-s5&#34;,&#34;title&#34;:&#34;Grupė SU(2) ir jos realioji algebra&#34;},{&#34;id&#34;:&#34;lec1-s6&#34;,&#34;title&#34;:&#34;Savikontrolės klausimai&#34;},{&#34;id&#34;:&#34;lec1-s7&#34;,&#34;title&#34;:&#34;Santrauka ir literatūra&#34;}]},{&#34;id&#34;:2,&#34;title&#34;:&#34;Eksponentiniai atvaizdavimai ir lokalioji grupės struktūra&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec2-s1&#34;,&#34;title&#34;:&#34;Matricinė eksponentė&#34;},{&#34;id&#34;:&#34;lec2-s2&#34;,&#34;title&#34;:&#34;Vienparametriai pogrupiai&#34;},{&#34;id&#34;:&#34;lec2:sec-general&#34;,&#34;title&#34;:&#34;Lie grupės eksponentinis atvaizdavimas&#34;},{&#34;id&#34;:&#34;lec2-s4&#34;,&#34;title&#34;:&#34;Jungtinimas ir homomorfizmai&#34;},{&#34;id&#34;:&#34;lec2:sec-bch&#34;,&#34;title&#34;:&#34;Beikerio–Kembelo–Hausdorfo formulė&#34;},{&#34;id&#34;:&#34;lec2-s6&#34;,&#34;title&#34;:&#34;Eksponentės grupėje SL(2,ℝ)&#34;},{&#34;id&#34;:&#34;lec2-s7&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec2-s8&#34;,&#34;title&#34;:&#34;Santrauka ir literatūra&#34;}]},{&#34;id&#34;:3,&#34;title&#34;:&#34;Pogrupiai, faktorerdvės ir vienalytės erdvės&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec3-s1&#34;,&#34;title&#34;:&#34;Uždarieji ir imersiniai pogrupiai&#34;},{&#34;id&#34;:&#34;lec3-s2&#34;,&#34;title&#34;:&#34;Iracionalioji tiesė dvimačiame tore&#34;},{&#34;id&#34;:&#34;lec3-s3&#34;,&#34;title&#34;:&#34;Gretutinių klasių erdvės, veikimai ir faktorgrupės&#34;},{&#34;id&#34;:&#34;lec3-s4&#34;,&#34;title&#34;:&#34;Sfera kaip SO(3)/SO(2)&#34;},{&#34;id&#34;:&#34;lec3-s5&#34;,&#34;title&#34;:&#34;Sfera kaip SU(2)/U(1)&#34;},{&#34;id&#34;:&#34;lec3-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec3-s7&#34;,&#34;title&#34;:&#34;Santrauka ir literatūra&#34;}]},{&#34;id&#34;:4,&#34;title&#34;:&#34;Dengiančiosios grupės, integravimas ir nusileidimas&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec4-s1&#34;,&#34;title&#34;:&#34;Kilpos, homotopija ir dengiančiosios grupės&#34;},{&#34;id&#34;:&#34;lec4-s2&#34;,&#34;title&#34;:&#34;Lie integravimo teorema ir teorema Lie III&#34;},{&#34;id&#34;:&#34;lec4-s3&#34;,&#34;title&#34;:&#34;Nusileidimas per padengimo branduolį&#34;},{&#34;id&#34;:&#34;lec4:R&#34;,&#34;title&#34;:&#34;Tiesė virš apskritimo&#34;},{&#34;id&#34;:&#34;lec4-s5&#34;,&#34;title&#34;:&#34;SU(2) virš SO(3)&#34;},{&#34;id&#34;:&#34;lec4-s6&#34;,&#34;title&#34;:&#34;Savikontrolės klausimai&#34;},{&#34;id&#34;:&#34;lec4-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:5,&#34;title&#34;:&#34;Haro matas, vidurkinimas ir ortogonalumas&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec5:sec:int&#34;,&#34;title&#34;:&#34;Tankiai ir integravimas daugdarose&#34;},{&#34;id&#34;:&#34;lec5:sec:haar&#34;,&#34;title&#34;:&#34;Haro integralas&#34;},{&#34;id&#34;:&#34;lec5:sec:avg&#34;,&#34;title&#34;:&#34;Skaliarinių sandaugų ir operatorių vidurkinimas&#34;},{&#34;id&#34;:&#34;lec5:sec:orth&#34;,&#34;title&#34;:&#34;Matricinių koeficientų ortogonalumas&#34;},{&#34;id&#34;:&#34;lec5:sec:ex&#34;,&#34;title&#34;:&#34;Pavyzdžiai: grupės U(1) ir SU(2)&#34;},{&#34;id&#34;:&#34;lec5-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec5-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:6,&#34;title&#34;:&#34;Kompaktinių grupių struktūra ir maksimalieji torai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec6-s1&#34;,&#34;title&#34;:&#34;Invariantinė skaliarinė sandauga ir skaidinys&#34;},{&#34;id&#34;:&#34;lec6-s2&#34;,&#34;title&#34;:&#34;Maksimalieji torai ir jų jungtinumas&#34;},{&#34;id&#34;:&#34;lec6-s3&#34;,&#34;title&#34;:&#34;Toro teoremos įrodymo eskizas atvaizdavimo laipsnio metodu&#34;},{&#34;id&#34;:&#34;lec6-s4&#34;,&#34;title&#34;:&#34;Eksponentės siurjektyvumas ir Veilio grupė&#34;},{&#34;id&#34;:&#34;lec6-s5&#34;,&#34;title&#34;:&#34;Unitariosios grupės ir nekompaktinės grupės pavyzdys&#34;},{&#34;id&#34;:&#34;lec6-s6&#34;,&#34;title&#34;:&#34;Faktorgrupės pagal baigtinius centrinius pogrupius&#34;},{&#34;id&#34;:&#34;lec6-s7&#34;,&#34;title&#34;:&#34;Savikontrolės klausimai&#34;},{&#34;id&#34;:&#34;lec6-s8&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:7,&#34;title&#34;:&#34;Gardelės, centrai ir globaliosios formos&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec7-s1&#34;,&#34;title&#34;:&#34;Kompaktinės ir jungios Abelio grupės&#34;},{&#34;id&#34;:&#34;lec7-s2&#34;,&#34;title&#34;:&#34;Charakteriai ir kocharakteriai&#34;},{&#34;id&#34;:&#34;lec7-s3&#34;,&#34;title&#34;:&#34;Šaknys, košaknys ir centras&#34;},{&#34;id&#34;:&#34;lec7-s4&#34;,&#34;title&#34;:&#34;Globaliosios formos&#34;},{&#34;id&#34;:&#34;lec7-s5&#34;,&#34;title&#34;:&#34;Pavyzdžiai&#34;},{&#34;id&#34;:&#34;lec7-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec7-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:8,&#34;title&#34;:&#34;Kompaktinių grupių įvaizdžių aukščiausieji svoriai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec8:sec:setup&#34;,&#34;title&#34;:&#34;Toro charakteriai ir dominantiškumas&#34;},{&#34;id&#34;:&#34;lec8:sec:theorem&#34;,&#34;title&#34;:&#34;Klasifikavimo teorema&#34;},{&#34;id&#34;:&#34;lec8:sec:central&#34;,&#34;title&#34;:&#34;Centriniai charakteriai ir globaliosios formos&#34;},{&#34;id&#34;:&#34;lec8:sec:examples&#34;,&#34;title&#34;:&#34;Globaliosios formos pavyzdžiuose&#34;},{&#34;id&#34;:&#34;lec8:sec:tensor&#34;,&#34;title&#34;:&#34;Tenzorinės sandaugos ir nuoseklumo patikrinimai&#34;},{&#34;id&#34;:&#34;lec8-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec8-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:9,&#34;title&#34;:&#34;Veilio integravimas ir charakterių skaičiavimai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec9:sec:statement&#34;,&#34;title&#34;:&#34;Matai, šaknys ir formuluotė&#34;},{&#34;id&#34;:&#34;lec9:sec:jacobian&#34;,&#34;title&#34;:&#34;Šakninių plokštumų jakobianas ir daugiklis |W|&#34;},{&#34;id&#34;:&#34;lec9:sec:su2&#34;,&#34;title&#34;:&#34;Modelis: klasių funkcijų integralai grupėje SU(2)&#34;},{&#34;id&#34;:&#34;lec9:sec:characters&#34;,&#34;title&#34;:&#34;Charakteriai tore ir ne vienajungės grupės&#34;},{&#34;id&#34;:&#34;lec9:sec:checks&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec9-s6&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:10,&#34;title&#34;:&#34;Peterio–Veilio teorema ir pilnumas&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec10:sec:prelim&#34;,&#34;title&#34;:&#34;Parengiamieji analizės faktai&#34;},{&#34;id&#34;:&#34;lec10:sec:compact&#34;,&#34;title&#34;:&#34;Suvidurkintas kompaktinis operatorius&#34;},{&#34;id&#34;:&#34;lec10:sec:regular&#34;,&#34;title&#34;:&#34;Reguliarusis įvaizdis&#34;},{&#34;id&#34;:&#34;lec10:sec:pw&#34;,&#34;title&#34;:&#34;Peterio–Veilio teorema&#34;},{&#34;id&#34;:&#34;lec10:sec:examples&#34;,&#34;title&#34;:&#34;Pavyzdžiai&#34;},{&#34;id&#34;:&#34;lec10-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec10-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:11,&#34;title&#34;:&#34;Furjė analizė ir sąsūka&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec11:sec:transform&#34;,&#34;title&#34;:&#34;Transformacija, kurios reikšmės yra operatoriai&#34;},{&#34;id&#34;:&#34;lec11:sec:plancherel&#34;,&#34;title&#34;:&#34;Planšerelio teorema iš Peterio–Veilio teoremos&#34;},{&#34;id&#34;:&#34;lec11:sec:conv&#34;,&#34;title&#34;:&#34;Sąsūka apverčia tvarką&#34;},{&#34;id&#34;:&#34;lec11:sec:uniform&#34;,&#34;title&#34;:&#34;Taškinė ir tolygioji inversija&#34;},{&#34;id&#34;:&#34;lec11:sec:central&#34;,&#34;title&#34;:&#34;Centriniai branduoliai ir izotipiniai projektoriai&#34;},{&#34;id&#34;:&#34;lec11-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec11-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:12,&#34;title&#34;:&#34;Vienalytės erdvės ir kompaktinė indukcija&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec12:sec:quotient&#34;,&#34;title&#34;:&#34;Funkcijos ir integravimas erdvėje K/H&#34;},{&#34;id&#34;:&#34;lec12:sec:mult&#34;,&#34;title&#34;:&#34;Kartotinumai erdvėje L²(K/H)&#34;},{&#34;id&#34;:&#34;lec12:sec:ind&#34;,&#34;title&#34;:&#34;Kompaktinė indukcija ir Frobenijaus abipusiškumas&#34;},{&#34;id&#34;:&#34;lec12:sec:sphere&#34;,&#34;title&#34;:&#34;Sfera SO(3)/SO(2)&#34;},{&#34;id&#34;:&#34;lec12:sec:checks&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec12-s6&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:13,&#34;title&#34;:&#34;Spinorinės grupės ir projektyviniai įvaizdžiai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec13-s1&#34;,&#34;title&#34;:&#34;Klifordo algebros ir spinorinės grupės&#34;},{&#34;id&#34;:&#34;lec13-s2&#34;,&#34;title&#34;:&#34;Posūkių grupės dvigubas padengimas&#34;},{&#34;id&#34;:&#34;lec13-s3&#34;,&#34;title&#34;:&#34;Spin(3), SU(2) ir nusileidimas&#34;},{&#34;id&#34;:&#34;lec13-s4&#34;,&#34;title&#34;:&#34;Projektyviniai unitarieji įvaizdžiai&#34;},{&#34;id&#34;:&#34;lec13-s5&#34;,&#34;title&#34;:&#34;Projektyvinių įvaizdžių pakėlimas&#34;},{&#34;id&#34;:&#34;lec13-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec13-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:14,&#34;title&#34;:&#34;Reprezentatyviosios funkcijos ir tenzorinė rekonstrukcija&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec14:sec-coeff&#34;,&#34;title&#34;:&#34;Matriciniai koeficientai&#34;},{&#34;id&#34;:&#34;lec14:sec-hopf&#34;,&#34;title&#34;:&#34;Grupės daugyba kaip struktūriniai atvaizdavimai&#34;},{&#34;id&#34;:&#34;lec14:sec-recovery&#34;,&#34;title&#34;:&#34;Grupės K atkūrimas&#34;},{&#34;id&#34;:&#34;lec14:sec-models&#34;,&#34;title&#34;:&#34;Du modeliai&#34;},{&#34;id&#34;:&#34;lec14:sec-category&#34;,&#34;title&#34;:&#34;Įvaizdžių kategorija&#34;},{&#34;id&#34;:&#34;lec14-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec14-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:15,&#34;title&#34;:&#34;Stiprusis tolydumas ir infinitezimalieji generatoriai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec15:sec:recap&#34;,&#34;title&#34;:&#34;Nuo matricų prie Hilberto erdvių&#34;},{&#34;id&#34;:&#34;lec15:sec:continuity&#34;,&#34;title&#34;:&#34;Stiprusis tolydumas&#34;},{&#34;id&#34;:&#34;lec15:sec:smooth&#34;,&#34;title&#34;:&#34;Glodieji vektoriai ir išvestinis įvaizdis&#34;},{&#34;id&#34;:&#34;lec15:sec:stone&#34;,&#34;title&#34;:&#34;Neaprėžti operatoriai ir Stouno teorema&#34;},{&#34;id&#34;:&#34;lec15:sec:model&#34;,&#34;title&#34;:&#34;Postūmiai erdvėje L²(ℝ)&#34;},{&#34;id&#34;:&#34;lec15:sec:checks&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec15:sec:summary&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:16,&#34;title&#34;:&#34;Haro matas nekompaktinėse grupėse ir modulinė funkcija&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec16:sec:densities&#34;,&#34;title&#34;:&#34;Tankiai ir integravimas&#34;},{&#34;id&#34;:&#34;lec16:sec:haar&#34;,&#34;title&#34;:&#34;Kairysis ir dešinysis Haro tankiai&#34;},{&#34;id&#34;:&#34;lec16:sec:modular&#34;,&#34;title&#34;:&#34;Modulinė funkcija&#34;},{&#34;id&#34;:&#34;lec16:sec:affine&#34;,&#34;title&#34;:&#34;Afininė grupė&#34;},{&#34;id&#34;:&#34;lec16:sec:regular&#34;,&#34;title&#34;:&#34;Reguliarieji įvaizdžiai&#34;},{&#34;id&#34;:&#34;lec16:sec:lc&#34;,&#34;title&#34;:&#34;Lokaliai kompaktinės grupės&#34;},{&#34;id&#34;:&#34;lec16-s7&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec16-s8&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:17,&#34;title&#34;:&#34;Unitarioji indukcija&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec17:sec:equiv&#34;,&#34;title&#34;:&#34;Ekvivariantinės funkcijos&#34;},{&#34;id&#34;:&#34;lec17:sec:quot&#34;,&#34;title&#34;:&#34;Faktoriniai matai&#34;},{&#34;id&#34;:&#34;lec17:sec:ind&#34;,&#34;title&#34;:&#34;Normuotasis indukuotasis įvaizdis&#34;},{&#34;id&#34;:&#34;lec17:sec:model&#34;,&#34;title&#34;:&#34;Grupės ax+b įvaizdžiai, indukuoti iš postūmių&#34;},{&#34;id&#34;:&#34;lec17:sec:orbit&#34;,&#34;title&#34;:&#34;Dažnio mastelio keitimų orbita&#34;},{&#34;id&#34;:&#34;lec17-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec17-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:18,&#34;title&#34;:&#34;Heizenbergo grupė ir Veilio sąryšiai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec18:sec-group&#34;,&#34;title&#34;:&#34;Grupės dėsnis&#34;},{&#34;id&#34;:&#34;lec18:sec-schr&#34;,&#34;title&#34;:&#34;Šrėdingerio įvaizdis&#34;},{&#34;id&#34;:&#34;lec18:sec-svn&#34;,&#34;title&#34;:&#34;Stouno–fon Noimano teorema&#34;},{&#34;id&#34;:&#34;lec18:sec-model&#34;,&#34;title&#34;:&#34;Gauso matriciniai koeficientai ir nulinis centrinis charakteris&#34;},{&#34;id&#34;:&#34;lec18-s5&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec18-s6&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:19,&#34;title&#34;:&#34;Kojungtinės orbitos ir orbitų metodas nilpotentinėms grupėms&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec19-s1&#34;,&#34;title&#34;:&#34;Dualusis veikimas&#34;},{&#34;id&#34;:&#34;lec19-s2&#34;,&#34;title&#34;:&#34;Simplektinė forma kiekvienoje orbitoje&#34;},{&#34;id&#34;:&#34;lec19-s3&#34;,&#34;title&#34;:&#34;Heizenbergo plokštumos ir taškai&#34;},{&#34;id&#34;:&#34;lec19-s4&#34;,&#34;title&#34;:&#34;Poliarizacijos ir orbitų teorema&#34;},{&#34;id&#34;:&#34;lec19-s5&#34;,&#34;title&#34;:&#34;Indukcija atkuria Šrėdingerio formulę&#34;},{&#34;id&#34;:&#34;lec19-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec19-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:20,&#34;title&#34;:&#34;Realiosios formos ir nekompaktinė struktūra&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec20:sec:forms&#34;,&#34;title&#34;:&#34;Realiosios formos ir Kartano involiucijos&#34;},{&#34;id&#34;:&#34;lec20:sec:decomp&#34;,&#34;title&#34;:&#34;Apribotosios šaknys ir globalieji skaidiniai&#34;},{&#34;id&#34;:&#34;lec20:sec:sl2&#34;,&#34;title&#34;:&#34;Pirmojo rango modelis SL(2,ℝ)&#34;},{&#34;id&#34;:&#34;lec20:sec:half&#34;,&#34;title&#34;:&#34;Viršutinė pusplokštuma&#34;},{&#34;id&#34;:&#34;lec20:sec:checks&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec20-s6&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:21,&#34;title&#34;:&#34;Glodieji vektoriai, K-tipai ir (g,K)-moduliai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec21:sec:vectors&#34;,&#34;title&#34;:&#34;Glodieji vektoriai ir K-baigtiniai vektoriai&#34;},{&#34;id&#34;:&#34;lec21:sec:compat&#34;,&#34;title&#34;:&#34;Suderinamumo sąlygos&#34;},{&#34;id&#34;:&#34;lec21:sec:sl2&#34;,&#34;title&#34;:&#34;Apskritimo K-tipai grupės SL(2,ℝ) atveju&#34;},{&#34;id&#34;:&#34;lec21:sec:limits&#34;,&#34;title&#34;:&#34;Ko neužfiksuoja (𝔤,K)-modulis&#34;},{&#34;id&#34;:&#34;lec21:sec:checks&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec21-s6&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:22,&#34;title&#34;:&#34;Grupės SL(2,R) pagrindinė serija&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec22-s1&#34;,&#34;title&#34;:&#34;Indukavimo duomenys&#34;},{&#34;id&#34;:&#34;lec22-s2&#34;,&#34;title&#34;:&#34;Plokštumos modelis ir apskritimo modelis&#34;},{&#34;id&#34;:&#34;lec22-s3&#34;,&#34;title&#34;:&#34;Unitarumas menamojoje ašyje&#34;},{&#34;id&#34;:&#34;lec22-s4&#34;,&#34;title&#34;:&#34;K-tipai ir Lie algebros veikimas&#34;},{&#34;id&#34;:&#34;lec22-s5&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec22-s6&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:23,&#34;title&#34;:&#34;Diskrečiosios serijos ir pirmojo rango unitariųjų įvaizdžių visuma&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec23-s1&#34;,&#34;title&#34;:&#34;Disko modelis&#34;},{&#34;id&#34;:&#34;lec23-s2&#34;,&#34;title&#34;:&#34;K-tipai ir Lie algebros operatoriai&#34;},{&#34;id&#34;:&#34;lec23-s3&#34;,&#34;title&#34;:&#34;Nusileidimo sąlygos&#34;},{&#34;id&#34;:&#34;lec23-s4&#34;,&#34;title&#34;:&#34;Palyginimas ir unitariųjų įvaizdžių visuma&#34;},{&#34;id&#34;:&#34;lec23-s5&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec23-s6&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:24,&#34;title&#34;:&#34;Lorenco grupės ir baigtinės dimensijos įvaizdžiai&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec24:sec:geometry&#34;,&#34;title&#34;:&#34;Minkovskio erdvė ir Lorenco grupė&#34;},{&#34;id&#34;:&#34;lec24:sec:cover&#34;,&#34;title&#34;:&#34;Dvigubas padengimas&#34;},{&#34;id&#34;:&#34;lec24:sec:complex&#34;,&#34;title&#34;:&#34;Lorenco algebros kompleksifikacija&#34;},{&#34;id&#34;:&#34;lec24:sec:reps&#34;,&#34;title&#34;:&#34;Baigtinės dimensijos įvaizdžių klasifikacija&#34;},{&#34;id&#34;:&#34;lec24:sec:examples&#34;,&#34;title&#34;:&#34;Veilio spinoriai ir keturmačiai vektoriai&#34;},{&#34;id&#34;:&#34;lec24:sec:checks&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec24-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:25,&#34;title&#34;:&#34;Puankarė grupės įvaizdžiai ir mažosios grupės&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec25:sec:group&#34;,&#34;title&#34;:&#34;Puankarė grupė kaip pusiau tiesioginė sandauga&#34;},{&#34;id&#34;:&#34;lec25:sec:orbits&#34;,&#34;title&#34;:&#34;Impulsų charakteriai ir masės paviršiai&#34;},{&#34;id&#34;:&#34;lec25:sec:little&#34;,&#34;title&#34;:&#34;Mažosios grupės ir Makio klasifikacija&#34;},{&#34;id&#34;:&#34;lec25:sec:massless&#34;,&#34;title&#34;:&#34;Bemasiai sektoriai: spiralingumas ir tolydusis sukinys&#34;},{&#34;id&#34;:&#34;lec25:sec:model&#34;,&#34;title&#34;:&#34;Masyvusis indukuotasis modelis&#34;},{&#34;id&#34;:&#34;lec25-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec25-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:26,&#34;title&#34;:&#34;Ekvivariantinės tiesinės sluoksniuotės ir Borelio–Veilio teorema&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec26-s1&#34;,&#34;title&#34;:&#34;Nuo ekvivariantinių funkcijų prie pjūvių&#34;},{&#34;id&#34;:&#34;lec26-s2&#34;,&#34;title&#34;:&#34;Projekcinė tiesė ir jos du žemėlapiai&#34;},{&#34;id&#34;:&#34;lec26-s3&#34;,&#34;title&#34;:&#34;Holomorfinių pjūvių apskaičiavimas&#34;},{&#34;id&#34;:&#34;lec26-s4&#34;,&#34;title&#34;:&#34;Grupės veikimas ir jo dualusis įvaizdis&#34;},{&#34;id&#34;:&#34;lec26-s5&#34;,&#34;title&#34;:&#34;Bendroji Borelio–Veilio teorema&#34;},{&#34;id&#34;:&#34;lec26-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec26-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:27,&#34;title&#34;:&#34;Kompaktinės orbitos ir geometrinis kvantavimas&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec27-s1&#34;,&#34;title&#34;:&#34;Sferinė orbita ir jos plotas&#34;},{&#34;id&#34;:&#34;lec27-s2&#34;,&#34;title&#34;:&#34;Sietys, aprašytos lokaliaisiais reperiais&#34;},{&#34;id&#34;:&#34;lec27-s3&#34;,&#34;title&#34;:&#34;Sferos sluoksniuotė sveikuoju atveju&#34;},{&#34;id&#34;:&#34;lec27-s4&#34;,&#34;title&#34;:&#34;Holomorfiniai pjūviai ir ekvivariantiškumas&#34;},{&#34;id&#34;:&#34;lec27-s5&#34;,&#34;title&#34;:&#34;Kompaktinė konstrukcija ir poslinkis&#34;},{&#34;id&#34;:&#34;lec27-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec27-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]},{&#34;id&#34;:28,&#34;title&#34;:&#34;Rekonstrukcija ir kvantinių grupių riba&#34;,&#34;sections&#34;:[{&#34;id&#34;:&#34;lec28-s1&#34;,&#34;title&#34;:&#34;Dvi algebros&#34;},{&#34;id&#34;:&#34;lec28-s2&#34;,&#34;title&#34;:&#34;Koeficientų diferencijavimas&#34;},{&#34;id&#34;:&#34;lec28-s3&#34;,&#34;title&#34;:&#34;Ką apima dualioji erdvė&#34;},{&#34;id&#34;:&#34;lec28-s4&#34;,&#34;title&#34;:&#34;Globaliosios formos ir tenzorinė rekonstrukcija&#34;},{&#34;id&#34;:&#34;lec28-s5&#34;,&#34;title&#34;:&#34;Ką keičia kvantinių grupių kursas&#34;},{&#34;id&#34;:&#34;lec28-s6&#34;,&#34;title&#34;:&#34;Savikontrolė&#34;},{&#34;id&#34;:&#34;lec28-s7&#34;,&#34;title&#34;:&#34;Santrauka&#34;}]}],&#34;context&#34;:&#34;Studijuoju kursą „Lie grupės ir jų įvaizdžių teorija“: {n}-ąją paskaitą „{title}“, skyrelį „{topic}“. Šiam kursui yra reikalingi kursai „Tiesinė algebra fizikams“, „Baigtinės grupės ir jų atvaizdavimai“, „Lie algebros ir jų įvaizdžių teorija“ bei kategorijų kalbos pagrindai. Mano konspekte yra šie susitarimai. Lie grupės yra baigtinės dimensijos realiosios Lie grupės. Įvaizdžiai yra tolydūs ir veikia kompleksinėse tiesinėse erdvėse. Skaliarinės sandaugos yra antitiesinės pirmojo argumento atžvilgiu. Realioji Lie algebra ir jos kompleksifikacija yra skirtingi objektai. Kompaktiškumas ir jungumas yra nurodomi tada, kai jų reikia.\nTu nesi matęs mano konspekto. Kai sakai, kas jame yra parašyta, pasakyk, kad spėji, ir paprašyk manęs patikrinti.&#34;,&#34;modes&#34;:[{&#34;id&#34;:&#34;explain&#34;,&#34;label&#34;:&#34;Paaiškink su pavyzdžiu&#34;,&#34;description&#34;:&#34;Trumpas paaiškinimas, vienas mažas pavyzdys, paskui uždavinys jums.&#34;,&#34;detailLabel&#34;:&#34;Kas tiksliai neaišku? Neprivaloma, bet kuo tiksliau, tuo geriau.&#34;,&#34;detailPlaceholder&#34;:&#34;pvz., kokios prielaidos reikia šiai teoremai ir kur įrodymas ją naudoja&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;Dėl ko nesu tikras: {detail}&#34;,&#34;template&#34;:&#34;{context}\n{detail}\n\nPrašau:\n1. Pirmiausia paaiškink idėją paprastais žodžiais: ne daugiau kaip dvi trumpos pastraipos. Apibrėžk kiekvieną naudojamą simbolį arba paklausk, kaip jis apibrėžtas mano konspekte.\n2. Išnagrinėk VIENĄ mažą konkretų pavyzdį. Jis turi būti mažiausias atvejis, kuriame idėja dar yra matoma. Parodyk kiekvieną žingsnį, kad galėčiau kiekvieną eilutę patikrinti ranka.\n3. Pateik vieną kontrpavyzdį ir tiksliai pasakyk, kuri prielaida jame nėra tenkinama.\n4. Tada duok man VIENĄ panašų uždavinį. Jo nespręsk. Lauk mano atsakymo.\n5. Kai atsakysiu, nesakyk vien „teisingai“ ar „neteisingai“. Jei klystu, duok man patikrą, kurią galiu atlikti pats (atskirasis atvejis, dimensijų skaičiavimas, nepanaudota prielaida), ir leisk man pačiam rasti klaidą.\n\nKiekvienam teiginiui nurodyk, kokių prielaidų jam reikia. Jei naudoji teoremą, įvardyk ją ir pasakyk, kad ją cituoji. Aš patikrinsiu, ar mano konspekte ji yra įrodyta, ar cituojama.&#34;},{&#34;id&#34;:&#34;state&#34;,&#34;label&#34;:&#34;Paprašyk manęs suformuluoti&#34;,&#34;description&#34;:&#34;Apibrėžimų ir rezultatų klausia po vieną; kiekvieną tikrinate pagal konspektą.&#34;,&#34;detailLabel&#34;:&#34;Į ką sutelkti dėmesį? Neprivaloma.&#34;,&#34;detailPlaceholder&#34;:&#34;pvz., pagrindinės šio skyrelio teoremos prielaidos&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;Prašau sutelkti dėmesį į: {detail}&#34;,&#34;template&#34;:&#34;{context}\n{detail}\n\nPaprašyk manęs suformuluoti šio skyrelio teiginius. Nieko neaiškink, nebent parašyčiau „tiesiog pasakyk“.\n1. Užduok po VIENĄ klausimą ir lauk mano atsakymo. Pradėk nuo pagrindinio šio skyrelio apibrėžimo ar rezultato su visomis jo prielaidomis.\n2. Tada paprašyk pavyzdžio, kontrpavyzdžio ir paklausk, kurią prielaidą rezultatas naudoja.\n3. Nesakyk, ar mano formuluotė sutampa su konspektu, nes konspekto nesi matęs. Paprašyk, kad pats ją palyginčiau su konspektu ir pasakyčiau, kas skyrėsi.\n4. Kai kalbu miglotai, užduok patikslinantį klausimą, o ne taisyk mane.\n5. Po šešių klausimų paklausk, kuriuos teiginius turėčiau perskaityti dar kartą.&#34;},{&#34;id&#34;:&#34;check&#34;,&#34;label&#34;:&#34;Patikrink mano sprendimą&#34;,&#34;description&#34;:&#34;Įklijuokite savo sprendimą: klausinės, kol klaidą rasite patys.&#34;,&#34;detailLabel&#34;:&#34;Įklijuokite uždavinį ir savo sprendimą arba pridėkite juos pokalbyje.&#34;,&#34;detailPlaceholder&#34;:&#34;Uždavinys: …\nMano sprendimas: …&#34;,&#34;detailEmpty&#34;:&#34;Uždavinys:\n[įklijuokite uždavinį]\n\nMano sprendimas:\n[įklijuokite kiekvieną sprendimo eilutę]&#34;,&#34;detailFilled&#34;:&#34;Uždavinys ir mano sprendimas:\n{detail}&#34;,&#34;template&#34;:&#34;{context}\nBandžiau išspręsti uždavinį ir noriu pats rasti savo klaidas. Neperrašyk mano sprendimo ir nepateik pataisyto.\n\n{detail}\n\n1. Pirmiausia paprašyk manęs pasakyti, kas duota ir ką reikia parodyti ar apskaičiuoti.\n2. Tada eik per mano sprendimą po vieną žingsnį. Klausk, koks apibrėžimas, ankstesnis rezultatas ar cituojama teorema pagrindžia kiekvieną žingsnį. Po VIENĄ klausimą.\n3. Jei žingsnis klaidingas, neįvardyk klaidos. Pasakyk, į kurią eilutę pažiūrėti, ir duok man patikrą, kurią galiu atlikti (atskirasis atvejis, dimensijų skaičiavimas, ar atvaizdavimas yra gerai apibrėžtas, nepanaudota prielaida).\n4. Kai sprendimas yra teisingas, paprašyk manęs vienu sakiniu suformuluoti jo pagrindinę idėją.&#34;}]}" data-text="{&#34;copied&#34;:&#34;Nukopijuota ✓&#34;,&#34;selected&#34;:&#34;Nepavyko nukopijuoti automatiškai: užklausa yra pažymėta, todėl paspauskite Ctrl+C.&#34;}"> <h2 id="ask-heading">Klausti apie paskaitą</h2> <div class="ask-card"> <label class="ask-step"> <span>Paskaita</span> <select class="select-field" data-lecture> <option value="1" selected> 1 · Lie grupės ir jų liestinės algebros </option><option value="2"> 2 · Eksponentiniai atvaizdavimai ir lokalioji grupės struktūra </option><option value="3"> 3 · Pogrupiai, faktorerdvės ir vienalytės erdvės </option><option value="4"> 4 · Dengiančiosios grupės, integravimas ir nusileidimas </option><option value="5"> 5 · Haro matas, vidurkinimas ir ortogonalumas </option><option value="6"> 6 · Kompaktinių grupių struktūra ir maksimalieji torai </option><option value="7"> 7 · Gardelės, centrai ir globaliosios formos </option><option value="8"> 8 · Kompaktinių grupių įvaizdžių aukščiausieji svoriai </option><option value="9"> 9 · Veilio integravimas ir charakterių skaičiavimai </option><option value="10"> 10 · Peterio–Veilio teorema ir pilnumas </option><option value="11"> 11 · Furjė analizė ir sąsūka </option><option value="12"> 12 · Vienalytės erdvės ir kompaktinė indukcija </option><option value="13"> 13 · Spinorinės grupės ir projektyviniai įvaizdžiai </option><option value="14"> 14 · Reprezentatyviosios funkcijos ir tenzorinė rekonstrukcija </option><option value="15"> 15 · Stiprusis tolydumas ir infinitezimalieji generatoriai </option><option value="16"> 16 · Haro matas nekompaktinėse grupėse ir modulinė funkcija </option><option value="17"> 17 · Unitarioji indukcija </option><option value="18"> 18 · Heizenbergo grupė ir Veilio sąryšiai </option><option value="19"> 19 · Kojungtinės orbitos ir orbitų metodas nilpotentinėms grupėms </option><option value="20"> 20 · Realiosios formos ir nekompaktinė struktūra </option><option value="21"> 21 · Glodieji vektoriai, K-tipai ir (g,K)-moduliai </option><option value="22"> 22 · Grupės SL(2,R) pagrindinė serija </option><option value="23"> 23 · Diskrečiosios serijos ir pirmojo rango unitariųjų įvaizdžių visuma </option><option value="24"> 24 · Lorenco grupės ir baigtinės dimensijos įvaizdžiai </option><option value="25"> 25 · Puankarė grupės įvaizdžiai ir mažosios grupės </option><option value="26"> 26 · Ekvivariantinės tiesinės sluoksniuotės ir Borelio–Veilio teorema </option><option value="27"> 27 · Kompaktinės orbitos ir geometrinis kvantavimas </option><option value="28"> 28 · Rekonstrukcija ir kvantinių grupių riba </option> </select> </label> <fieldset class="ask-step"> <legend>Skyrelis</legend> <div class="chip-row" data-topics> <label class="topic-chip"><input type="radio" name="ask-topic" value="lec1-s1" checked><span>Glodžiosios koordinatės</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="lec1-s2"><span>Glodžiosios grupės</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="lec1-s3"><span>Liestiniai vektoriai neutraliajame elemente</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="lec1-s4"><span>Postūmiai ir skliaustai</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="lec1-s5"><span>Grupė SU(2) ir jos realioji algebra</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="lec1-s6"><span>Savikontrolės klausimai</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="lec1-s7"><span>Santrauka ir literatūra</span></label> </div> </fieldset> <fieldset class="ask-step"> <legend>Ko jums reikia?</legend> <div class="mode-grid"> <label class="mode"> <input type="radio" name="ask-mode" value="explain" checked> <span class="mode-label">Paaiškink su pavyzdžiu</span> <span class="mode-description">Trumpas paaiškinimas, vienas mažas pavyzdys, paskui uždavinys jums.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="state"> <span class="mode-label">Paprašyk manęs suformuluoti</span> <span class="mode-description">Apibrėžimų ir rezultatų klausia po vieną; kiekvieną tikrinate pagal konspektą.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="check"> <span class="mode-label">Patikrink mano sprendimą</span> <span class="mode-description">Įklijuokite savo sprendimą: klausinės, kol klaidą rasite patys.</span> </label> </div> </fieldset> <label class="ask-step"> <span data-detail-label>Kas tiksliai neaišku? Neprivaloma, bet kuo tiksliau, tuo geriau.</span> <textarea class="number-field ask-detail" rows="2" data-detail placeholder="pvz., kokios prielaidos reikia šiai teoremai ir kur įrodymas ją naudoja"></textarea> </label> <label class="ask-step"> <span>Jūsų užklausa – redaguokite laisvai</span> <textarea class="ask-preview" rows="12" data-preview spellcheck="false"></textarea> </label> <div class="ask-actions"> <button class="btn btn-primary" type="button" data-copy-preview>Kopijuoti užklausą</button> </div> <p class="ask-status" data-status role="status" aria-live="polite">Užklausa veikia vienodai bet kuriame asistente – Gemini, ChatGPT, Claude ar Copilot.</p> </div> </section><h2>Trys įpročiai, kurie lemia skirtumą</h2> <ul class="habits"> <li><b>Klauskite konkrečiai.</b> Į miglotą klausimą („Haro integralas“) gausite miglotą atsakymą. Į aiškų klausimą („Kuri Haro integralo savybė užtikrina, kad unitarizuojamumo įrodyme apibrėžta forma yra teigiamai apibrėžta?“) gausite aiškų atsakymą.</li><li><b>Priverskite jį grąžinti darbą.</b> Jei jis vis aiškina, sustabdykite: „Dabar duok man pratimą ir palauk mano atsakymo.“ Skaityti paaiškinimą atrodo kaip mokymasis; spręsti pratimą – tai mokymasis.</li><li><b>Tikrinkite viską.</b> Šie modeliai matematikoje klysta užtikrintai ir dažnai. Atkreipkite dėmesį į konspekto susitarimus. Realioji Lie algebra ir jos kompleksifikacija yra skirtingi objektai. Skaliarinės sandaugos yra antitiesinės pirmojo argumento atžvilgiu. Kompaktiškumą ir jungumą nurodome tada, kai jų reikia. Patikrinkite, ar kiekviena asistento naudojama teorema yra pateikta su prielaidomis ir ar konspekte ji yra įrodyta, ar cituojama. Kiekvieną teiginį tikrinkite pagal konspektą. Mokytojo klaidų radimas yra pratimo dalis, o ne trukdis.</li> </ul> <h2>Ilgesni pokalbiai</h2> <p class="section-intro">Išsamesnės užklausos: visos idėjos kartojimas, jūsų parašyto įrodymo patikra ir uždavinių sudarymas vienas kitam. Atverkite vieną, kad ją perskaitytumėte; pokalbyje užpildykite [laukus laužtiniuose skliaustuose].</p> <details class="prompt-card" data-prompt> <summary> <span class="prompt-title">1 · Pakartoti sąvoką</span> <span class="prompt-when">Naudokite po paskaitos, kad išsiaiškintumėte, ar idėją suprantate, ar tik ją perskaitėte.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Sokratiškasis mokytojas — Lie grupės ir jų įvaizdžių teorija
+
+Tu esi mano sokratiškasis mokytojas vienai temai iš įrodymais grindžiamo kurso
+apie Lie grupes ir jų įvaizdžius. Šiam kursui yra reikalingi kursai „Tiesinė
+algebra fizikams“, „Baigtinės grupės ir jų atvaizdavimai“, „Lie algebros ir jų
+įvaizdžių teorija“ bei kategorijų kalbos pagrindai. Tavo tikslas yra gilinti
+mano supratimą klausinėjant. Neduok man atsakymų ir nespręsk uždavinių už mane.
+
+Tema, kurią noriu įtvirtinti: [paskaita, skyrelis ir apibrėžimas ar rezultatas
+mano žodžiais]
+
+Mano dabartinis lygis: [pvz., „perskaičiau paskaitą, bet dar nesprendžiau
+savikontrolės klausimų“ / „įrodymą galiu sekti eilutė po eilutės, bet pats jo
+nebūčiau radęs“]
+
+Mano konspekto susitarimai, kurių turi laikytis. Lie grupės yra baigtinės
+dimensijos realiosios Lie grupės. Įvaizdžiai yra tolydūs ir veikia
+kompleksinėse tiesinėse erdvėse. Skaliarinės sandaugos yra antitiesinės pirmojo
+argumento atžvilgiu. Realioji Lie algebra ir jos kompleksifikacija yra
+skirtingi objektai. Kompaktiškumas ir jungumas yra nurodomi tada, kai jų reikia.
+
+Tu nesi matęs mano konspekto. Kai sakai, kas jame yra parašyta, pasakyk, kad
+spėji, ir paprašyk manęs patikrinti.
+
+Taisyklės tau:
+
+ 1. Pradėk vienu ar dviem klausimais, kad sužinotum, ką jau suprantu, ir viską
+    pritaikyk tam lygiui.
+ 2. Užduok po VIENĄ klausimą ir lauk mano atsakymo. Niekada nerašyk ilgo teksto.
+ 3. Kai klystu ar kalbu miglotai, netaisyk manęs tiesiai. Užduok patikslinantį
+    klausimą arba paprašyk manęs mažiausio atvejo, kuriame savo teiginį galiu
+    patikrinti pats.
+ 4. Jei dviem ėjimais užstringu, duok užuominą, o ne atsakymą. Tiesiogiai
+    aiškink tik tada, kai parašau „tiesiog pasakyk“.
+ 5. Versk mane pereiti nuo bendro teiginio prie konkretaus atvejo ir atgal:
+    paprašyk pavyzdžio, kontrpavyzdžio ir mažiausio atvejo, kuriame idėja dar
+    yra matoma.
+ 6. Labiausiai spausk dėl PRIELAIDŲ. Klausk, kurias iš jų argumentas iš
+    tikrųjų naudoja ir kas sugriūva be kiekvienos iš jų.
+ 7. Klausk, ar rezultatas mano konspekte yra įrodytas, ar cituojamas. Mano
+    konspekte žyma [P] reiškia įrodytą rezultatą, [S] reiškia argumento
+    eskizą, [C] reiškia cituojamą teoremą ir [I] reiškia rezultatą iš būtinojo
+    ankstesnio kurso. Cituojama teorema yra duotybė samprotavimui, o ne tai, ką
+    įrodinėjame.
+ 8. Nerašyk pilnų įrodymų. Jei žingsnis reikalingas mintiai parodyti, pateik
+    mažiausią fragmentą ir paklausk, kas turi vykti toliau.
+ 9. Kas kelis ėjimus paprašyk manęs apibendrinti, ką nustatėme, ir tai
+    patikrinti pagal konspektą.
+
+Galutinis tikslas: galiu tiksliai suformuluoti rezultatą su prielaidomis,
+pateikti pavyzdį bei kontrpavyzdį ir pasakyti, kuri prielaida atlieka darbą.
+Kai nuspręsi, kad tai pasiekiau, pasakyk tai ir duok man VIENĄ trumpą uždavinį
+savarankiškam darbui.
+
+Pradėk dabar savo pirmuoju diagnostiniu klausimu.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">2 · Patikrinti savo įrodymą</span> <span class="prompt-when">Naudokite, kai parašėte samprotavimą ir norite sužinoti, ar jis iš tikrųjų yra įrodymas.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Sokratiškasis įrodymų tikrintojas
+
+Tu esi mano sokratiškasis partneris, padedantis patikrinti mano paties
+įrodymą įrodymais grindžiamame kurse apie Lie grupes ir jų įvaizdžius. Padėk
+man pačiam rasti spragą savo samprotavime. Nesurask ir neužlopyk jos už
+mane.
+
+Ką reikėjo įrodyti: [įklijuokite teiginį su visomis prielaidomis]
+Mano samprotavimas: [įklijuokite kiekvieną eilutę, įskaitant žingsnius, kurie,
+mano manymu, yra akivaizdžiai teisingi]
+Ko noriu: [„manau, kad samprotavimas yra teisingas, bet noriu jį kruopščiai
+patikrinti“ / „žinau, kad kažkas yra negerai, bet nematau, kur“]
+
+Mano konspekto susitarimai: Lie grupės yra baigtinės dimensijos realiosios Lie
+grupės; įvaizdžiai yra tolydūs ir veikia kompleksinėse tiesinėse erdvėse;
+skaliarinės sandaugos yra antitiesinės pirmojo argumento atžvilgiu; realioji
+Lie algebra ir jos kompleksifikacija yra skirtingi objektai.
+
+Taisyklės tau:
+
+ 1. Niekada neperrašyk mano įrodymo ir nepateik pataisytos versijos. Padėk man
+    pačiam rasti ir ištaisyti klaidą.
+ 2. Užduok po VIENĄ klausimą ir lauk mano atsakymo.
+ 3. Pradėk prašydamas manęs savais žodžiais atskirai suformuluoti prielaidas ir
+    išvadą, dar prieš žiūrint į bet kurią samprotavimo eilutę.
+ 4. Tada eik eilutė po eilutės ir prašyk pagrįsti kiekvieną žingsnį ATSKIRAI:
+    koks apibrėžimas, ankstesnis rezultatas ar cituojama teorema jį leidžia.
+    Žingsnis, kurio negaliu pagrįsti, yra tas žingsnis, kurį reikia nagrinėti.
+ 5. Kai naudoju teoremą, paprašyk manęs suformuluoti jos prielaidas ir
+    patikrinti kiekvieną iš jų mano situacijoje. Paklausk, ar mano konspekte ji
+    yra įrodyta, ar cituojama.
+ 6. Versk mane išbandyti samprotavimą: paklausk, ką mano įrodymas teigtų be
+    vienos iš prielaidų. Jei jis vis tiek „veikia“, spragą radome.
+ 7. Paprašyk išbandyti samprotavimą mažiausiu atveju ir atveju, kai teiginys
+    yra klaidingas. Tikras įrodymas ten turi sugriūti. Vieta, kurioje jis
+    sugriūva, parodo, nuo kurios prielaidos jis priklauso.
+ 8. Jei tikrai užstringu dviem ėjimais, susiaurink paiešką: nurodyk eilutę arba
+    dvi eilutes, tarp kurių yra klaida, bet ne pačią klaidą.
+ 9. Kai klaida bus rasta, paprašyk manęs savais žodžiais pasakyti jos priežastį ir
+    įvardyti vieną patikrą, kuri būtų ją aptikusi anksčiau.
+
+Pradėk prašydamas manęs savais žodžiais suformuluoti prielaidas ir išvadą.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">3 · Sudaryti uždavinį kurso draugui</span> <span class="prompt-when">Dirbkite poromis. Gero uždavinio sudarymas reikalauja daugiau supratimo nei jo sprendimas. Pirmiausia naudokite šią pusę.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Uždavinio sudarytojas (darbas su kurso draugu)
+
+Tu padedi man sudaryti kurso draugui uždavinį iš kurso apie Lie grupes ir jų
+įvaizdžius.
+Uždavinio autorius esu aš. Tu padedi jį patobulinti, bet jo už mane
+nesugalvoji.
+
+Tema: [paskaita ir skyrelis]
+Mano juodraštinė idėja: [aprašykite, nors ir apytiksliai]
+
+Taisyklės tau:
+
+ 1. Užduok klausimus, kurie priverstų uždavinį būti tikslų: kokia tiksliai
+    grupė, koks įvaizdis ar erdvė, kas duota, ką reikia rasti ar įrodyti ir
+    kokio pavidalo turi būti atsakymas.
+ 2. Versk mane aiškiai nurodyti kiekvieną prielaidą, pavyzdžiui, ar grupė yra
+    kompaktinė, ar ji yra jungi ir virš kokio kūno yra imama erdvė ar algebra.
+ 3. Klausk, ar uždavinys iš tikrųjų tikrina idėją. Jei jį galima išspręsti
+    nukopijavus konspekto pavyzdį, padėk man tai pamatyti ir jį sustiprinti.
+ 4. Versk mane patikrinti, ar uždavinys yra korektiškai suformuluotas: ar
+    kiekvienas objektas yra apibrėžtas, ar kiekvienas atvaizdavimas yra gerai
+    apibrėžtas ir ar skaičiavimus galima atlikti ranka.
+ 5. Uždaviniui „įrodykite, kad“ versk mane įsitikinti, kad parašytas teiginys
+    iš tikrųjų yra teisingas. Pirmiausia paprašyk, kad pats ieškočiau
+    kontrpavyzdžio.
+ 6. Versk mane parašyti savo pilną pavyzdinį sprendimą ir laikyti jį sau, kad
+    galėčiau pagal jį vertinti. Nerašyk jo už mane.
+ 7. Versk mane nurodyti, kuriomis paskaitomis sprendėjas gali remtis.
+    Uždavinys, kuriam reikia dar nepasiektos teoremos, nėra sąžiningas.
+
+Galutinis tikslas: aiškus, nedviprasmiškas uždavinys, parašytas sąrašas to, ką
+galima laikyti žinomu, ir mano paties pavyzdinis sprendimas, kurį patikrinau
+pagal konspektą.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">4 · Išspręsti partnerio uždavinį</span> <span class="prompt-when">Antroji darbo poromis pusė. Paskui susitikite ir palyginkite be DI.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Sprendėjo padėjėjas (kurso draugas, gavęs uždavinį)
+
+Kurso draugas man sudarė uždavinį iš kurso apie Lie grupes ir jų įvaizdžius.
+Tu esi mano sokratiškasis sprendimo partneris: padėk man samprotauti
+sprendimo link, bet sprendimo man neduok.
+
+Uždavinys: [įklijuokite jį]
+Mano dabartinės mintys: [nuo ko pradedu, net jei nuo nieko]
+
+Taisyklės tau:
+
+ 1. Pirmiausia paprašyk manęs savais žodžiais perpasakoti uždavinį ir tiksliai
+    pasakyti, kas duota ir ko ieškoma. Prieš tęsdamas patikrink, ar supratau.
+ 2. Užduok po VIENĄ klausimą. Padėk man pasirinkti būdą klausinėdamas, o ne
+    pats siūlydamas metodą.
+ 3. Prieš man pradedant, paklausk, kuri prielaida, mano manymu, neš
+    samprotavimą.
+ 4. Kai pasiūlau metodą, versk mane pagrįsti, kodėl jis turėtų veikti, DAR
+    PRIEŠ jį taikant.
+ 5. Kai naudoju teoremą, paprašyk patikrinti jos prielaidas ir pasakyti, ar
+    mano konspekte ji yra įrodyta, ar cituojama.
+ 6. Jei dviem ėjimais užstringu, duok užuominą, kuri susiaurina būdą, o ne
+    atsakymą. Tiesiogiai atsakyk tik tada, kai parašau „tiesiog pasakyk“.
+ 7. Kai turiu atsakymą, paklausk, kodėl jis yra teisingas ir kur samprotavimas
+    sugriūtų be vienos iš prielaidų.
+
+Pradėk prašydamas manęs savais žodžiais perpasakoti uždavinį.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><h2>Darbas poromis</h2> <ol class="steps"> <li>Susiskirstykite poromis. Pagal 3-iąją užklausą kiekvienas atskirai parašo uždavinį ir pavyzdinį sprendimą.</li><li>Apsikeiskite. Perduokite tik uždavinį, be savo sprendimo.</li><li>Spręskite. Pagal 4-ąją užklausą kiekvienas sprendžia kito uždavinį.</li><li>Palyginkite be DI. Ar sprendimai sutapo? Ar uždavinyje buvo spraga? Ar sudarytojo pavyzdinis sprendimas iš tikrųjų yra teisingas? Kiekvieną ginčytiną žingsnį patikrinkite pagal konspektą.</li> </ol> <div class="trap"> <h3>Dveji spąstai, kurių reikia vengti</h3> <p><strong>Uždavinio sudarytojas turi pats patikrinti savo pavyzdinį sprendimą.</strong> Nepasitikėkite DI sugeneruotais atsakymais. Jei „pavyzdinis“ atsakymas yra klaidingas, pagal jį gali būti įskaitytas klaidingas sprendimas. Tada niekas poroje apie tai niekada nesužinos.</p><p><strong>Sprendėjas turi atsispirti pagundai įklijuoti uždavinį ir paprašyti atsakymo.</strong> Lavinamas gebėjimas yra samprotavimas ir vertinimas, o ne atsakymo suradimas. Visas pratimas priklauso nuo to, kad šito nedarytumėte.</p> </div> <script>(function(){const strings = {"copied":"Nukopijuota ✓","selected":"Nepavyko nukopijuoti automatiškai: užklausa yra pažymėta, todėl paspauskite Ctrl+C."};
+
+    (function () {
+      /**
+       * Copy only when the student presses a copy button. The text goes to
+       * their clipboard; nothing is sent anywhere by this page.
+       */
+      function copy(text) {
+        var area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed"; area.style.opacity = "0"; area.style.top = "0";
+        document.body.appendChild(area);
+        area.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(area);
+        if (!ok && navigator.clipboard) {
+          navigator.clipboard.writeText(text).catch(function () {});
+          ok = true;
+        }
+        return ok;
+      }
+      function say(status, message) {
+        if (!status) return;
+        status.textContent = message;
+        status.classList.add("is-live");
+      }
+
+      // ---- Ask about a lecture -------------------------------------------
+      var ask = document.querySelector("[data-ask]");
+      if (ask) {
+        var data = JSON.parse(ask.dataset.ask);
+        var lectureSelect = ask.querySelector("[data-lecture]");
+        var topics = ask.querySelector("[data-topics]");
+        var detail = ask.querySelector("[data-detail]");
+        var detailLabel = ask.querySelector("[data-detail-label]");
+        var preview = ask.querySelector("[data-preview]");
+        var status = ask.querySelector("[data-status]");
+
+        var fill = function (template, values) {
+          return template.replace(/\{(\w+)\}/g, function (whole, key) {
+            return key in values ? values[key] : whole;
+          });
+        };
+        var lecture = function () {
+          return data.lectures.find(function (l) { return String(l.id) === lectureSelect.value; })
+            || data.lectures[0];
+        };
+        var mode = function () {
+          var picked = ask.querySelector("input[name=ask-mode]:checked");
+          return data.modes.find(function (m) { return m.id === (picked && picked.value); }) || data.modes[0];
+        };
+        var topic = function () {
+          var picked = ask.querySelector("input[name=ask-topic]:checked");
+          var section = picked && lecture().sections.find(function (s) { return s.id === picked.value; });
+          return section ? section.title : "";
+        };
+
+        var renderTopics = function (wantedSection) {
+          topics.textContent = "";
+          var sections = lecture().sections;
+          var chosen = sections.some(function (s) { return s.id === wantedSection; })
+            ? wantedSection : (sections[0] && sections[0].id);
+          sections.forEach(function (section) {
+            var label = document.createElement("label");
+            label.className = "topic-chip";
+            var input = document.createElement("input");
+            input.type = "radio"; input.name = "ask-topic"; input.value = section.id;
+            input.checked = section.id === chosen;
+            var span = document.createElement("span");
+            span.textContent = section.title;
+            label.appendChild(input); label.appendChild(span);
+            topics.appendChild(label);
+          });
+        };
+        var render = function () {
+          var l = lecture(), m = mode(), typed = detail.value.trim();
+          detailLabel.textContent = m.detailLabel;
+          detail.placeholder = m.detailPlaceholder;
+          var context = fill(data.context, { n: l.id, title: l.title, topic: topic() });
+          var detailText = typed ? fill(m.detailFilled, { detail: typed }) : m.detailEmpty;
+          preview.value = fill(m.template, { context: context, detail: detailText })
+            .replace(/\n{3,}/g, "\n\n");
+        };
+
+        // ai/?lecture=N[&section=id]: arrive on that lecture and section, if open.
+        var query = new URLSearchParams(location.search);
+        var wanted = query.get("lecture");
+        if (wanted && data.lectures.some(function (l) { return String(l.id) === wanted; })) {
+          lectureSelect.value = wanted;
+        }
+        renderTopics(query.get("section"));
+        lectureSelect.addEventListener("change", function () { renderTopics(null); render(); });
+        // The preview is excluded: its change event fires on blur, and
+        // re-rendering then would throw away what the student just edited.
+        ask.addEventListener("change", function (event) {
+          if (event.target !== lectureSelect && event.target !== preview && event.target !== detail) render();
+        });
+        detail.addEventListener("input", render);
+        render();
+
+        ask.querySelector("[data-copy-preview]").addEventListener("click", function () {
+          if (copy(preview.value)) { say(status, strings.copied); }
+          else { preview.select(); say(status, strings.selected); }
+        });
+      }
+
+      // ---- The long prompts ----------------------------------------------
+      document.querySelectorAll("[data-prompt]").forEach(function (card) {
+        var source = card.querySelector("[data-prompt-text]");
+        var body = source.textContent || "";
+        var status = card.querySelector("[data-status]");
+        var selectSource = function () {
+          var range = document.createRange();
+          range.selectNodeContents(source);
+          var selection = window.getSelection();
+          if (selection) { selection.removeAllRanges(); selection.addRange(range); }
+        };
+        card.querySelector("[data-copy]").addEventListener("click", function () {
+          if (copy(body)) { say(status, strings.copied); }
+          else { selectSource(); say(status, strings.selected); }
+        });
+      });
+    })();
+  })();</script>  </main> <footer class="site-footer"> <div class="wrap">  <p> Lie grupės ir jų įvaizdžių teorija.   Uždavinių lapai čia yra skelbiami tik anglų kalba ir tik su klausimais. </p> </div> </footer> <script>
+      document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
+        var root = document.documentElement;
+        var current = root.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("liegroups-theme", next); } catch (e) {}
+      });
+    </script>  <script type="module" src="/lie-grupes/_astro/Base.astro_astro_type_script_index_0_lang.CacgBNw_.js"></script> </body> </html>
